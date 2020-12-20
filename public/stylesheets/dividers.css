@@ -9,16 +9,18 @@ Date: November/2020
 ****************************************************************************
 */
 
-footer{
-	width: auto;
-	height: 60px;
-	background-color: black;
+.divider01{
+  width:auto;
+  margin: auto;
+  height: 2px;
+  background-color: brown;
 }
 
-.copyright {
-	color: #FFFFFF;
-	font-size: 30px;
-	font-weight: bold;
-	margin-left: 20px;
-	padding: 15px;
+.divider02{
+  width:auto;
+  margin: 60px;
+  height: 0px;
+  padding: 0px;
+  background-color: white;
+  border: dashed;
 }

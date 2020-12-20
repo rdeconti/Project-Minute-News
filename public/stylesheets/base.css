@@ -1,17 +1,41 @@
-/** ****************************************************************************
-Project: Seniores Digitais - Labora/Alura/Oracle ONE
-Programmer: Rosemeire Deconti
-Date: December/2020
-**************************************************************************** **/
-.base-container{
+/**
+		****************************************************************************
+	    Projeto Labora/Alura/Oracle ONE
+	    Curso Alura: Projeto de Conclusão Formação 1 e Formação 2
+	    Aluna: Rosemeire Deconti
+	    Exercício: Página WEB Conferência Alura
+	    Data: Novembro/2020
+		****************************************************************************
+**/
+
+/* ------------------------------------------------------------------ Classes */
+.baseContainer{
+	font-family: 'Noto Sans JP', sans-serif;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
-  text-align: center;
+  height: 100%;
   background-color: yellow;
 }
 
-.base-message{
+.baseHeader{
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+.baseGoTop{
+  font-size: 10px;
+  font-weight: bold;
+	color: #FFFFFF;
+  cursor: pointer;
+}
+
+.baseGlyphicon{
+	color: #FFFFFF;
+  font-size: 40px;
+}
+
+.baseMessage {
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -24,10 +48,49 @@ Date: December/2020
 	display: none;
 }
 
-/** ------------------------------------------------------------ Media Query **/
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
+
+
+
+
+
+
+
+
+
+
+
+.baseParagraphWhite{
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+}
+
+.baseParagraphBlack{
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+}
+
+.baseTextAlign{
+  text-align: center;
+}
+
+.baseTitleWhite{
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 10px;
+}
+
+.baseTitleBlack{
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  margin: 10px;
 }
