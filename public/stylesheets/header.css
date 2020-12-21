@@ -1,28 +1,23 @@
-/*
-****************************************************************************
-Project Labora/Alura/Oracle ONE
-Training Alura: Programming, HTML5, CSS3 e JAVASCRIPT
-Student: Rosemeire Deconti
-Description: Create a page with news
+/******************************************************************************
+Project: Seniores Digitais - Labora/Alura/Oracle ONE
+Programmer: Rosemeire Deconti
+Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
-Date: November/2020
-****************************************************************************
-*/
-
-.headerLogo{
+******************************************************************************/
+.header-logo{
 	padding: 10px;
 	margin-left: 200px;
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
 
-.headerSection{
+.header-section{
 	width: auto;
   background-color: white;
 	margin: 0 auto;
 }
 
-.headerTopnav {
+.header-topnav {
 	font-weight: bold;
 	font-size: 20px;
   position: absolute;
@@ -32,10 +27,10 @@ Date: November/2020
 	right: 200px;
 }
 
-.headerTopnav li {
+.header-topnav li {
 	float: left;}
 
-.headerTopnav li a {
+.header-topnav li a {
   display: block;
   color: black;
   text-align: center;
@@ -43,33 +38,34 @@ Date: November/2020
   text-decoration: none;
 }
 
-.headerTopnav li:hover a:not(.active) {
+.header-topnav li:hover a:not(.active) {
   background-color: white;
   color: black;
 }
 
-.headerTopnav li a.active {
+.header-topnav li a.active {
 	background-color: white;
   color: black;
 }
 
-.headerTopnav li.right {
+.header-topnav li.right {
 	float: right;
 }
 
-.headerTopnav .dropdown-content {
+.header-topnav .dropdown-content {
   display: none;
   position: absolute;
 }
 
-.headerTopnav .dropdown-content a {
+.header-topnav .dropdown-content a {
   color: black;
 }
 
-.headerTopnav .dropdown:hover > .dropdown-content {
+.header-topnav .dropdown:hover > .dropdown-content {
   display: block;
 }
 
+/** ------------------------------------------------------------ Media Query **/
 @media screen and (max-width: 600px){
     .topnav,
     .topnav {position: unset}

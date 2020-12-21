@@ -1,28 +1,22 @@
-
-/*
-****************************************************************************
-Project Labora/Alura/Oracle ONE
-Training Alura: Programming, HTML5, CSS3 e JAVASCRIPT
-Student: Rosemeire Deconti
-Description: Create a page with news
+/******************************************************************************
+Project: Seniores Digitais - Labora/Alura/Oracle ONE
+Programmer: Rosemeire Deconti
+Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
-Date: November/2020
-****************************************************************************
-*/
-
-.contactContainer {
+******************************************************************************/
+.contact-container {
   display: flex;
   flex-direction: row;
 	justify-content: center;
   background-color: yellow;
 }
 
-.contactContainerAddress{
+.contact-container-address{
 	background-color: white;
 	width: 50%;
 }
 
-.contactContainerContents{
+.contact-container-contents{
 	width: auto;
 	margin-right: 20%;
 	margin-left: 20%;
@@ -30,12 +24,12 @@ Date: November/2020
 	margin-bottom: 15%;
 }
 
-.contactContainerEmail{
+.contact-container-email{
 	background-color: #ae0000;
 	width: 50%;
 }
 
-.contactAddressTitle1 {
+.contact-address-title-1 {
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: left;
@@ -43,20 +37,20 @@ Date: November/2020
 	color: black;
 }
 
-.contactAddressTitle2 {
+.contact-address-title-2 {
 	font-weight: bold;
 	text-align: left;
 	font-size: 20px;
 	color: black;
 }
 
-.contactFormInput {
+.contact-form-input {
 	display: block;
 	padding: 10px;
 	width: 95%;
 }
 
-.contactFormTitle {
+.contact-form-title {
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: left;
@@ -64,14 +58,14 @@ Date: November/2020
 	color: white;
 }
 
-.contactFormLabel{
+.contact-form-label{
 	font-size: 20px;
 	font-weight: bold;
 	padding: 0px;
 	color: white;
 }
 
-.contactFormSend {
+.contact-form-send {
 	width:auto;
 	padding: 10px;
 	float:right;
@@ -83,12 +77,12 @@ Date: November/2020
 	cursor: pointer;
 }
 
-.contactFormSend:hover {
+.contact-for-send:hover {
 	background: darkorange;
 	transform: scale(1.2);
 }
 
-.contactSection{
+.contact-section{
 	width: auto;
   background-color: gray;
 }

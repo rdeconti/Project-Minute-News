@@ -1,37 +1,32 @@
-/*
-****************************************************************************
-Project Labora/Alura/Oracle ONE
-Training Alura: Programming, HTML5, CSS3 e JAVASCRIPT
-Student: Rosemeire Deconti
-Description: Create a page with news
+/******************************************************************************
+Project: Seniores Digitais - Labora/Alura/Oracle ONE
+Programmer: Rosemeire Deconti
+Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
-Date: November/2020
-****************************************************************************
-*/
-
-.newsSection{
+******************************************************************************/
+.news-section{
   width: auto;
   margin: 5px;
   background-color: white;
 }
 
-.newsTable{
+.news-table{
   width: auto;
   margin: 0 auto;
   background-color: gray;
 }
 
-.newsLine{
+.news-line{
   width: auto;
   padding: 20px;
 }
 
-.newsColumn{
+.news-column{
   width: 25%;
   background-color: white;
 }
 
-.newsDivision{
+.news-division{
   width: auto;
   padding: 10px;
   margin-top: 20px;
@@ -39,44 +34,44 @@ Date: November/2020
   border-left: 5px solid brown;
 }
 
-.newsImage{
+.news-image{
   padding:10px;
   max-width:200px;
   max-height:150px;
 }
 
-.newsFirstLine li{
+.news-first-line li{
   width: auto;
 	display: inline-block;
 }
 
-.newsDate{
+.news-date{
   margin-left: 10px;
   font-size: 15px;
 }
 
-.newsEditoria{
+.news-editoria{
   font-weight: bold;
   font-size: 15px;
 }
 
-.newsCounter{
+.news-counter{
   margin-left: 10px;
   font-weight: bold;
   color: red;
 }
 
-.newsNumber{
+.news-number{
   font-weight: bold;
   color: red;
 }
 
-.newsTotal{
+.news-total{
   font-weight: bold;
   color: red;
 }
 
-.newsText{
+.news-text{
   padding: 10px;
   font-size: 15px;
   font-weight: normal;
@@ -88,13 +83,13 @@ Date: November/2020
   white-space:normal;
 }
 
-.newsTitle{
+.news-title{
   padding: 10px;
   font-size: 25px;
   font-weight: bold;
 }
 
-.newsMore{
+.news-more{
   padding: 10px;
   font-size: 18px;
   font-weight: bold;

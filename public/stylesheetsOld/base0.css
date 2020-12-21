@@ -1,10 +1,15 @@
-/******************************************************************************
-Project: Seniores Digitais - Labora/Alura/Oracle ONE
-Programmer: Rosemeire Deconti
-Date: December/2020
-Challenge: https://github.com/Infoglobo/desafio-front-end
-******************************************************************************/
-.base-container{
+/**
+		****************************************************************************
+	    Projeto Labora/Alura/Oracle ONE
+	    Curso Alura: Projeto de Conclusão Formação 1 e Formação 2
+	    Aluna: Rosemeire Deconti
+	    Exercício: Página WEB Conferência Alura
+	    Data: Novembro/2020
+		****************************************************************************
+**/
+
+/* ------------------------------------------------------------------ Classes */
+.baseContainer{
 	font-family: 'Noto Sans JP', sans-serif;
   width: 100%;
   margin: 0 auto;
@@ -12,25 +17,25 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   background-color: yellow;
 }
 
-.base-header{
+.baseHeader{
 	font-size: 40px;
 	font-weight: bold;
 	color: white;
 }
 
-.base-go-top{
+.baseGoTop{
   font-size: 10px;
   font-weight: bold;
 	color: #FFFFFF;
   cursor: pointer;
 }
 
-.base-glyphicon{
+.baseGlyphicon{
 	color: #FFFFFF;
   font-size: 40px;
 }
 
-.base-message{
+.baseMessage {
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -43,25 +48,36 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
 	display: none;
 }
 
-.base-paragraph-white{
+
+
+
+
+
+
+
+
+
+
+
+.baseParagraphWhite{
   font-size: 20px;
   text-align: center;
   color: white;
   margin: 10px;
 }
 
-.base-paragraph-black{
+.baseParagraphBlack{
   font-size: 20px;
   text-align: center;
   color: black;
   margin: 10px;
 }
 
-.base-text-align{
+.baseTextAlign{
   text-align: center;
 }
 
-.base-title-white{
+.baseTitleWhite{
   font-size: 35px;
   font-weight: bold;
   text-transform: uppercase;
@@ -70,7 +86,7 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   margin: 10px;
 }
 
-.base-title-black{
+.baseTitleBlack{
   font-size: 35px;
   font-weight: bold;
   text-transform: uppercase;

@@ -1,16 +1,13 @@
 /**
 ****************************************************************************
-  Project Labora/Alura/Oracle ONE
-  Training Alura: Programming, HTML5, CSS3 e JAVASCRIPT
-  Student: Rosemeire Deconti
-  Description: Create a page with news
-  Challenge: https://github.com/Infoglobo/desafio-front-end
-  Date: November/2020
+Project: Seniores Digitais - Labora/Alura/Oracle ONE
+Programmer: Rosemeire Deconti
+Date: December/2020
+Challenge: https://github.com/Infoglobo/desafio-front-end
 ****************************************************************************
 **/
 
 var slideIndex = 1;
-
 showSlides(slideIndex);
 
 /** ------------------------------------------------------------------------ **/
@@ -18,8 +15,8 @@ function showSlides(n) {
 
   var i;
 
-  var slides = document.getElementsByClassName("slideShowCarousel");
-  var dots = document.getElementsByClassName("slideShowDot");
+  var slides = document.getElementsByClassName("slide-show-carousel");
+  var dots = document.getElementsByClassName("slide-show-dot");
 
   if (n > slides.length) {slideIndex = 1}
 
