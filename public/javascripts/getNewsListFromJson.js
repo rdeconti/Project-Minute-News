@@ -10,9 +10,6 @@ getNewsListFromJson();
 /** Get data from JSON using XMLHttpRequest                                  **/
 /** In case of error a message is displayed to user                          **/
 /** ------------------------------------------------------------------------ **/
-
-/** https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON **/
-
 function getNewsListFromJson(){
 
   var xhr = new XMLHttpRequest();
@@ -71,8 +68,13 @@ function createUnorderedList(editoria, itemJson){
 /** ---------------------------------------------------------------------- **/
 function generateListItem(editoria, itemJson){
 
-  var itemList = document.createElement("li");
+  var itemList = document.createElement("LI");
   itemList.classList.add("news-list-line");
+
+  /**
+  var itemList = document.createElement("DIV");
+  itemList.classList.add("news-division");
+  **/
 
   itemList.appendChild(formatListItem(editoria, "news-editoria"));
   itemList.appendChild(formatListItem(itemJson.Publicação, "news-date"));

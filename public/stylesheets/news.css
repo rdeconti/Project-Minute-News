@@ -10,7 +10,6 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
 }
 
 .news-division{
-  width: auto;
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -19,11 +18,13 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
 
 .news-editoria{
   font-weight: bold;
+  margin-left: 10px;
   font-size: 15px;
+  text-align: left;
 }
 
 .news-image{
-  padding:10px;
+  padding:20px;
   max-width:200px;
   max-height:150px;
 }
@@ -37,12 +38,15 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
 .news-list-line{
 	width: auto;
 	margin: 0 auto;
-	text-align: center;
+  text-align: center;
 	padding: 10px;
 	vertical-align: top;
 }
 
 .news-list-line li{
+  border-left: 10px;
+  border-color: brown;
+  border-style: solid;
 	display: inline-block;
 	width: 25%;
 	padding-bottom: 20px;
@@ -52,6 +56,7 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
+  text-align: right;
 }
 
 .news-text{
@@ -61,62 +66,18 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   line-height: 20px;
   max-width:200px;
   max-height:400px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:normal;
+  text-align: left;
+
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .news-title{
   padding: 10px;
-  font-size: 25px;
+  max-width: 200px;
+  font-size: 20px;
   font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.news-table{
-  width: auto;
-  margin: 0 auto;
-  background-color: gray;
-}
-
-.news-line{
-  width: auto;
-  padding: 20px;
-}
-
-.news-column{
-  width: 25%;
-  background-color: white;
-}
-
-.news-first-line li{
-  width: auto;
-	display: inline-block;
-}
-
-.news-counter{
-  margin-left: 10px;
-  font-weight: bold;
-  color: red;
-}
-
-.news-number{
-  font-weight: bold;
-  color: red;
-}
-
-.news-total{
-  font-weight: bold;
-  color: red;
+  text-align: left;
 }
