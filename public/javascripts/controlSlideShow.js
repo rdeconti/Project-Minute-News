@@ -1,12 +1,9 @@
-/**
-****************************************************************************
+/******************************************************************************
 Project: Seniores Digitais - Labora/Alura/Oracle ONE
 Programmer: Rosemeire Deconti
 Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
-****************************************************************************
-**/
-
+******************************************************************************/
 var slideIndex = 1;
 showSlides(slideIndex);
 

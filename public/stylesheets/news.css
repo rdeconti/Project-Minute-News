@@ -4,26 +4,9 @@ Programmer: Rosemeire Deconti
 Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
 ******************************************************************************/
-.news-section{
-  width: auto;
-  margin: 5px;
-  background-color: white;
-}
-
-.news-table{
-  width: auto;
-  margin: 0 auto;
-  background-color: gray;
-}
-
-.news-line{
-  width: auto;
-  padding: 20px;
-}
-
-.news-column{
-  width: 25%;
-  background-color: white;
+.news-date{
+  margin-left: 10px;
+  font-size: 15px;
 }
 
 .news-division{
@@ -34,41 +17,41 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   border-left: 5px solid brown;
 }
 
+.news-editoria{
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .news-image{
   padding:10px;
   max-width:200px;
   max-height:150px;
 }
 
-.news-first-line li{
+.news-section{
   width: auto;
+  margin: 5px;
+  background-color: white;
+}
+
+.news-list-line{
+	width: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.news-list-line li{
 	display: inline-block;
+	width: 25%;
+	padding-bottom: 20px;
 }
 
-.news-date{
-  margin-left: 10px;
-  font-size: 15px;
-}
-
-.news-editoria{
+.news-more{
+  padding: 10px;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 15px;
-}
-
-.news-counter{
-  margin-left: 10px;
-  font-weight: bold;
-  color: red;
-}
-
-.news-number{
-  font-weight: bold;
-  color: red;
-}
-
-.news-total{
-  font-weight: bold;
-  color: red;
 }
 
 .news-text{
@@ -89,8 +72,51 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   font-weight: bold;
 }
 
-.news-more{
-  padding: 10px;
-  font-size: 18px;
+
+
+
+
+
+
+
+
+
+
+
+
+.news-table{
+  width: auto;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.news-line{
+  width: auto;
+  padding: 20px;
+}
+
+.news-column{
+  width: 25%;
+  background-color: white;
+}
+
+.news-first-line li{
+  width: auto;
+	display: inline-block;
+}
+
+.news-counter{
+  margin-left: 10px;
   font-weight: bold;
+  color: red;
+}
+
+.news-number{
+  font-weight: bold;
+  color: red;
+}
+
+.news-total{
+  font-weight: bold;
+  color: red;
 }
