@@ -4,19 +4,16 @@ Programmer: Rosemeire Deconti
 Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
 ******************************************************************************/
-.divider-01{
-  width: auto;
-  margin: auto;
-  height: 2px;
-  background-color: brown;
-}
 
-.divider-02{
-  width:auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 0px;
-  padding: 0px;
-  background-color: white;
-  border: dashed;
-}
+/** Define Global Variants **/
+totalAcessosGoverno = 0;
+totalAcessosCarnaval = 0;
+totalAcessosEsporte = 0;
+totalAcessosFerias = 0;
+totalAcessosOutros = 0;
+
+totalEditoriasEsporte = 0;
+totalEditoriasPais = 0;
+totalEditoriasRio = 0;
+totalEditoriasCultura = 0;
+totalEditoriasInternacional = 0;

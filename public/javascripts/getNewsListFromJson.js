@@ -34,6 +34,7 @@ function getNewsListFromJson(){
 
               for(var indexNoticias in arrayObject[indexObject].Editorias[indexEditorias].Notícias) {
 
+                computeTotalEditorias(editoria);
                 createUnorderedList(editoria, arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias])
 
               }
@@ -49,6 +50,34 @@ function getNewsListFromJson(){
   });
 
   xhr.send();
+
+}
+
+/** ---------------------------------------------------------------------- **/
+/** Compute total of Editorias                                             **/
+/** ---------------------------------------------------------------------- **/
+function computeTotalEditorias(editoria){
+
+  switch (editoria) {
+    case "Esporte":
+      totalEditoriasEsporte++;
+      break;
+    case "País":
+      totalEditoriasPais++;
+      break;
+    case "Rio":
+      totalEditoriasRio++;
+      break;
+    case "Cultura":
+      totalEditoriasCultura++;
+      break;
+    case "Internacional":
+      totalEditoriasInternacional++;
+      break;
+    default:
+      totalEditoriasOutros++;
+      break;
+  }
 
 }
 

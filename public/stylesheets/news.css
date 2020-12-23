@@ -5,51 +5,45 @@ Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
 ******************************************************************************/
 .news-date{
+  padding: 5px;
   margin-left: 10px;
-  font-size: 15px;
-}
-
-.news-division{
-  padding: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-left: 5px solid brown;
-}
-
-.news-editoria{
-  font-weight: bold;
-  margin-left: 10px;
+  text-align: left;
   font-size: 15px;
   text-align: left;
 }
 
-.news-image{
-  padding:20px;
-  max-width:200px;
-  max-height:150px;
+.news-editoria{
+  padding: 5px;
+  margin-left: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.news-section{
-  width: auto;
-  margin: 5px;
-  background-color: white;
+.news-image{
+  padding: 5px;
+  margin-left: 10px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width:600px;
+  max-height:300px;
 }
 
 .news-list-line{
 	width: auto;
 	margin: 0 auto;
   text-align: center;
-	padding: 10px;
-	vertical-align: top;
 }
 
 .news-list-line li{
-  border-left: 10px;
+  border-left: 5px;
   border-color: brown;
   border-style: solid;
 	display: inline-block;
 	width: 25%;
-	padding-bottom: 20px;
+  vertical-align: top;
+  margin-bottom: 20px;
 }
 
 .news-more{
@@ -60,24 +54,26 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
 }
 
 .news-text{
-  padding: 10px;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 20px;
-  max-width:200px;
-  max-height:400px;
+  padding: 5px;
+  margin-left: 10px;
   text-align: left;
-
-
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  max-height: 100px;
 }
 
 .news-title{
-  padding: 10px;
-  max-width: 200px;
+  padding: 5px;
+  margin-left: 10px;
+  text-align: left;
   font-size: 20px;
   font-weight: bold;
-  text-align: left;
+}
+
+.news-section{
+  width: auto;
+  margin: 5px;
+  background-color: white;
 }

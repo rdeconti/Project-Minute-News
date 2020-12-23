@@ -4,37 +4,44 @@ Programmer: Rosemeire Deconti
 Date: December/2020
 Challenge: https://github.com/Infoglobo/desafio-front-end
 ******************************************************************************/
+
+/** ---------------------------------------------------------------------- **/
+/** Load google CHARTS                                                     **/
+/** ---------------------------------------------------------------------- **/
 google.charts.load("current", {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
+/** ---------------------------------------------------------------------- **/
+/** Generate chart with data from JSON and computed in Global Variants     **/
+/** ---------------------------------------------------------------------- **/
+function drawChart(){
 
-  var data = google.visualization.arrayToDataTable([
-    ["Editoria", "Ocorre", { role: "style" } ],
-    ["Governo", 75, "red"],
-    ["Carnaval", 50, "black"],
-    ["Esporte", 45, "black"],
-    ["Férias", 30, "black"],
-    ["Outros", 25, "black"]
-  ]);
+    var data = google.visualization.arrayToDataTable([
+      ["Editoria", "Ocorre", { role: "style" } ],
+      ["País", totalEditoriasPais, "red"],
+      ["Rio", totalEditoriasRio, "black"],
+      ["Esporte", totalEditoriasEsporte, "yellow"],
+      ["Cultura", totalEditoriasCultura, "pink"],
+      ["Internacional", totalEditoriasInternacional, "blue"]
+    ]);
 
-  var view = new google.visualization.DataView(data);
+    var view = new google.visualization.DataView(data);
 
-  view.setColumns([0, 1,
-                   { calc: "stringify",
-                     sourceColumn: 1,
-                     type: "string",
-                     role: "annotation" },
-                   2]);
+    view.setColumns([0, 1,
+                     { calc: "stringify",
+                       sourceColumn: 1,
+                       type: "string",
+                       role: "annotation" },
+                     2]);
 
-  var options = {
-    width: 600,
-    height: 400,
-    bar: {groupWidth: "50%"},
-    legend: { position: "none" },
-  };
+    var options = {
+      width: 700,
+      height: 400,
+      bar: {groupWidth: "50%"},
+      legend: { position: "none" },
+    };
 
-  var chart = new google.visualization.ColumnChart(document.getElementById("chartDrawn"));
-  chart.draw(view, options);
+    var chart = new google.visualization.ColumnChart(document.getElementById("chartDrawn"));
+    chart.draw(view, options);
 
 }
