@@ -142,24 +142,23 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
             <p class="selection-title-02">Ordenar por: </p>
           </div>
           <div class="selection-container-order">
-            <select class="selection-select">
-              <option>Data</option>
-              <option>Editoria</option>
-              <option>Noticia</option>
+            <select class="selection-select" id="selection-classification">
+              <option value="C1">Data</option>
+              <option value="C2">Editoria</option>
+              <option value="C3">Noticia</option>
             </select>
           </div>
           <div class="selection-container-title">
             <p class="selection-title-02">Filtrar por: </p>
           </div>
           <div class="selection-container-filter">
-            <select class="selection-select">
-              <option>Editoria</option>
-              <option>Esporte</option>
-              <option>Pais</option>
-              <option>Rio</option>
-              <option>Cultura</option>
-              <option>Internacional</option>
-              <option>Todos</option>
+            <select class="selection-select" id="selection-filter" onchange="javascript:controlFilterShow(this);">
+              <option value="F1">Todos</option>
+              <option value="F2">Esporte</option>
+              <option value="F3">País</option>
+              <option value="F4">Rio</option>
+              <option value="F5">Cultura</option>
+              <option value="F6">Internacional</option>
             </select>
           </div>
         </div>
@@ -348,6 +347,7 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
     <script type="text/javascript" src="javascripts/defineGlobalData.js"></script>
     <script type="text/javascript" src="javascripts/getNewsListFromJson.js"></script>
     <script type="text/javascript" src="javascripts/controlGraphShow.js"></script>
+    <script type="text/javascript" src="javascripts/controlFilterShow.js"></script>
 
     <script type="text/javascript" src="javascripts/controlNewsShow.js"></script>
     <script type="text/javascript" src="javascripts/controlSlideShow.js"></script>

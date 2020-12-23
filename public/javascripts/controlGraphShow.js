@@ -18,11 +18,11 @@ function drawChart(){
 
     var data = google.visualization.arrayToDataTable([
       ["Editoria", "Ocorre", { role: "style" } ],
-      ["País", totalEditoriasPais, "red"],
-      ["Rio", totalEditoriasRio, "black"],
-      ["Esporte", totalEditoriasEsporte, "yellow"],
-      ["Cultura", totalEditoriasCultura, "pink"],
-      ["Internacional", totalEditoriasInternacional, "blue"]
+      ["País", globalTotalEditoriasPais, "red"],
+      ["Rio", globalTotalEditoriasRio, "black"],
+      ["Esporte", globalTotalEditoriasEsporte, "yellow"],
+      ["Cultura", globalTotalEditoriasCultura, "pink"],
+      ["Internacional", globalTotalEditoriasInternacional, "blue"]
     ]);
 
     var view = new google.visualization.DataView(data);

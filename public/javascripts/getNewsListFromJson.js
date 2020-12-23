@@ -12,6 +12,8 @@ getNewsListFromJson();
 /** ------------------------------------------------------------------------ **/
 function getNewsListFromJson(){
 
+  console.log("Entrou no getNewsListFromJson");
+
   var xhr = new XMLHttpRequest();
 
   xhr.open("GET", "http://localhost:3003/noticias");
@@ -32,11 +34,14 @@ function getNewsListFromJson(){
 
               var editoria = (arrayObject[indexObject].Editorias[indexEditorias].Editoria);
 
-              for(var indexNoticias in arrayObject[indexObject].Editorias[indexEditorias].Notícias) {
+              if (globalCurrentFilter == "Todos" || globalCurrentFilter == editoria){
 
-                computeTotalEditorias(editoria);
-                createUnorderedList(editoria, arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias])
+                for(var indexNoticias in arrayObject[indexObject].Editorias[indexEditorias].Notícias) {
 
+                  computeTotalEditorias(editoria);
+                  createUnorderedList(editoria, arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias])
+
+                }
               }
             }
           }
@@ -60,22 +65,22 @@ function computeTotalEditorias(editoria){
 
   switch (editoria) {
     case "Esporte":
-      totalEditoriasEsporte++;
+      globalTotalEditoriasEsporte++;
       break;
     case "País":
-      totalEditoriasPais++;
+      globalTotalEditoriasPais++;
       break;
     case "Rio":
-      totalEditoriasRio++;
+      globalTotalEditoriasRio++;
       break;
     case "Cultura":
-      totalEditoriasCultura++;
+      globalTotalEditoriasCultura++;
       break;
     case "Internacional":
-      totalEditoriasInternacional++;
+      globalTotalEditoriasInternacional++;
       break;
     default:
-      totalEditoriasOutros++;
+      globalTotalEditoriasOutros++;
       break;
   }
 
@@ -99,11 +104,6 @@ function generateListItem(editoria, itemJson){
 
   var itemList = document.createElement("LI");
   itemList.classList.add("news-list-line");
-
-  /**
-  var itemList = document.createElement("DIV");
-  itemList.classList.add("news-division");
-  **/
 
   itemList.appendChild(formatListItem(editoria, "news-editoria"));
   itemList.appendChild(formatListItem(itemJson.Publicação, "news-date"));
