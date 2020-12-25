@@ -119,6 +119,26 @@ function getNewsListFromJson(){
                 }
           }
 
+          /*********************************************************************
+          for (var indexObject in arrayObject){
+
+            for(var indexEditorias in arrayObject[indexObject].Editorias){
+
+              var editoria = (arrayObject[indexObject].Editorias[indexEditorias].Editoria);
+
+              if (globalCurrentFilter == "Todos" || globalCurrentFilter == editoria){
+
+                for(var indexNoticias in arrayObject[indexObject].Editorias[indexEditorias].Notícias) {
+
+                  computeTotalEditorias(editoria);
+                  createUnorderedList(editoria, arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias])
+
+                }
+              }
+            }
+          }
+          *********************************************************************/
+
       } else {
 
           baseMessage.classList.remove("base-message");
@@ -162,10 +182,10 @@ function computeTotalEditorias(editoria){
 /** ---------------------------------------------------------------------- **/
 /** Create unordered list with data from Json                              **/
 /** ---------------------------------------------------------------------- **/
-function createUnorderedList(editoria, foto, titulo, texto, publicacao){
+function createUnorderedList(editoria, itemJson){
 
   var unorderedList = document.querySelector("#news-list-line");
-  var unorderedListItem = generateListItem(editoria, foto, titulo, texto, publicacao);
+  var unorderedListItem = generateListItem(editoria, itemJson);
   unorderedList.appendChild(unorderedListItem);
 
 }
@@ -173,16 +193,16 @@ function createUnorderedList(editoria, foto, titulo, texto, publicacao){
 /** ---------------------------------------------------------------------- **/
 /** Create item to unordered list with data from Json                      **/
 /** ---------------------------------------------------------------------- **/
-function generateListItem(editoria, foto, titulo, texto, publicacao){
+function generateListItem(editoria, itemJson){
 
   var itemList = document.createElement("LI");
   itemList.classList.add("news-list-line");
 
   itemList.appendChild(formatListItem(editoria, "news-editoria"));
-  itemList.appendChild(formatListItem(publicacao, "news-date"));
-  itemList.appendChild(formatListItem(foto, "news-image"));
-  itemList.appendChild(formatListItem(titulo, "news-title"));
-  itemList.appendChild(formatListItem(texto, "news-text"));
+  itemList.appendChild(formatListItem(itemJson.Publicação, "news-date"));
+  itemList.appendChild(formatListItem(itemJson.Foto, "news-image"));
+  itemList.appendChild(formatListItem(itemJson.Título, "news-title"));
+  itemList.appendChild(formatListItem(itemJson.Texto, "news-text"));
   itemList.appendChild(formatListItem("Saiba mais", "news-more"));
 
   return itemList;

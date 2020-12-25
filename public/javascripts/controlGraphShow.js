@@ -22,7 +22,8 @@ function drawChart(){
       ["Rio", globalTotalEditoriasRio, "black"],
       ["Esporte", globalTotalEditoriasEsporte, "yellow"],
       ["Cultura", globalTotalEditoriasCultura, "pink"],
-      ["Internacional", globalTotalEditoriasInternacional, "blue"]
+      ["Internacional", globalTotalEditoriasInternacional, "blue"],
+      ["Outros", globalTotalEditoriasOutros, "green"]
     ]);
 
     var view = new google.visualization.DataView(data);

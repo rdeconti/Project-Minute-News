@@ -12,5 +12,7 @@ globalTotalEditoriasPais = 0;
 globalTotalEditoriasRio = 0;
 globalTotalEditoriasCultura = 0;
 globalTotalEditoriasInternacional = 0;
+globalTotalEditoriasOutros = 0;
 
 globalCurrentFilter = "Todos";
+globalCurrentSort = "Nenhum";

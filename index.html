@@ -142,10 +142,10 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
             <p class="selection-title-02">Ordenar por: </p>
           </div>
           <div class="selection-container-order">
-            <select class="selection-select" id="selection-classification">
-              <option value="C1">Data</option>
-              <option value="C2">Editoria</option>
-              <option value="C3">Noticia</option>
+            <select class="selection-select" id="selection-classification" onchange="javascript:controlSortShow(this);">
+              <option value="C1">Nenhum</option>
+              <option value="C2">Data</option>
+              <option value="C3">Editoria</option>
             </select>
           </div>
           <div class="selection-container-title">
@@ -348,6 +348,9 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
     <script type="text/javascript" src="javascripts/getNewsListFromJson.js"></script>
     <script type="text/javascript" src="javascripts/controlGraphShow.js"></script>
     <script type="text/javascript" src="javascripts/controlFilterShow.js"></script>
+    <script type="text/javascript" src="javascripts/controlSortShow.js"></script>
+
+
 
     <script type="text/javascript" src="javascripts/controlNewsShow.js"></script>
     <script type="text/javascript" src="javascripts/controlSlideShow.js"></script>
