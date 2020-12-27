@@ -29,25 +29,6 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   height: auto;
 }
 
-.slide-show-number {
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 8px 12px;
-  position: absolute;
-}
-
-.slide-show-text {
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 8px 12px;
-  position: absolute;
-  width: auto;
-  text-align: center;
-  right: 0;
-}
-
 .slide-show-dot {
   width: auto;
   margin: 0 auto;

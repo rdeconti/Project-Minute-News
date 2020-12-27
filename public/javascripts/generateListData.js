@@ -12,8 +12,6 @@ getNewsListFromJson();
 /** ------------------------------------------------------------------------ **/
 function getNewsListFromJson(){
 
-  console.log("Entrou no getNewsListFromJson");
-
   var xhr = new XMLHttpRequest();
 
   xhr.open("GET", "http://localhost:3003/noticias");
@@ -28,96 +26,8 @@ function getNewsListFromJson(){
           var requestAnswer = xhr.responseText;
           var arrayObject = JSON.parse(requestAnswer);
 
-          // Processamento do seletor "ordenado por"
-          var arrayInternal = new Array(0);
-          var arrayIndex = 0;
-
-          var id;
-          var editoria;
-          var foto;
-          var titulo;
-          var texto;
-          var publicacao;
-          var sortKey;
-
-          var dia;
-          var mes;
-          var ano;
-
-          for (var indexObject in arrayObject){
-
-            for(var indexEditorias in arrayObject[indexObject].Editorias){
-
-              for(var indexNoticias in arrayObject[indexObject].Editorias[indexEditorias].Notícias) {
-
-                id = (arrayObject[indexObject].Editorias[indexEditorias].Id);
-                editoria = (arrayObject[indexObject].Editorias[indexEditorias].Editoria);
-                foto = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Foto);
-                titulo = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Título);
-                texto = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Texto);
-                publicacao = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Publicação);
-
-                switch (globalCurrentSort) {
-
-                  case "Data": // 06-01-2015
-                    ano = publicacao.substr(6, 4);
-                    mes = publicacao.substr(3, 2);
-                    dia = publicacao.substr(0, 2);
-                    sortKey = ano + mes + dia;
-                    arrayInternal [arrayIndex] = Array(sortKey, id, editoria, foto, titulo, texto, publicacao);
-                    break;
-
-                  case "Editoria":
-                    sortKey = editoria;
-                    arrayInternal [arrayIndex] = Array(sortKey, id, editoria, foto, titulo, texto, publicacao);
-                    break;
-
-                  default:
-                    sortKey = id;
-                    arrayInternal [arrayIndex] = Array(sortKey, id, editoria, foto, titulo, texto, publicacao);
-                    break;
-
-                }
-
-                arrayIndex++;
-
-              }
-            }
-          }
-
-          switch (globalCurrentSort) {
-
-            case "Data":
-              arrayInternal.sort();
-              break;
-
-            case "Editoria":
-              arrayInternal.sort();
-              break;
-
-            default:
-              arrayInternal.sort();
-              break;
-
-          }
-
-          console.log("tamanho array internal " + arrayInternal.length);
-
-          // Geração da lista "news" e tratamento do seletor "filtrar por"
-          for (index=0; index < arrayInternal.length; index++) {
-
-                id = arrayInternal[index][1];
-                editoria = arrayInternal[index][2];
-                foto = arrayInternal[index][3];
-                titulo = arrayInternal[index][4];
-                texto = arrayInternal[index][5];
-                publicacao = arrayInternal[index][6];
-
-                if (editoria) {
-                  computeTotalEditorias(editoria);
-                  createUnorderedList(editoria, foto, titulo, texto, publicacao)
-                }
-          }
+          // Convert Json to Array
+          convertFromJsonToArray(arrayObject);
 
       } else {
 
@@ -128,6 +38,112 @@ function getNewsListFromJson(){
   });
 
   xhr.send();
+
+}
+
+/** ---------------------------------------------------------------------- **/
+/** Conversion of Json to Array applying selectors "ordered" and "filter"  **/
+/** ---------------------------------------------------------------------- **/
+function convertFromJsonToArray(arrayObject){
+
+  // Processamento do seletor "ordenado por"
+  var arrayInternal = new Array(0);
+  var arrayIndex = 0;
+
+  var id;
+  var editoria;
+  var foto;
+  var titulo;
+  var texto;
+  var publicacao;
+  var sortKey;
+
+  var dia;
+  var mes;
+  var ano;
+
+  for (var indexObject in arrayObject){
+
+    for(var indexEditorias in arrayObject[indexObject].Editorias){
+
+      var editoriaId = (arrayObject[indexObject].Editorias[indexEditorias].Editoria);
+
+      if (globalCurrentFilter == "Todos" || globalCurrentFilter == editoriaId){
+
+        for(var indexNoticias in arrayObject[indexObject].Editorias[indexEditorias].Notícias) {
+
+          id = (arrayObject[indexObject].Editorias[indexEditorias].Id);
+          editoria = (arrayObject[indexObject].Editorias[indexEditorias].Editoria);
+          foto = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Foto);
+          titulo = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Título);
+          texto = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Texto);
+          publicacao = (arrayObject[indexObject].Editorias[indexEditorias].Notícias[indexNoticias].Publicação);
+
+          switch (globalCurrentSort) {
+
+            case "Data": // 06-01-2015
+              ano = publicacao.substr(6, 4);
+              mes = publicacao.substr(3, 2);
+              dia = publicacao.substr(0, 2);
+              sortKey = ano + mes + dia;
+              arrayInternal [arrayIndex] = Array(sortKey, id, editoria, foto, titulo, texto, publicacao);
+              break;
+
+            case "Editoria":
+              sortKey = editoria;
+              arrayInternal [arrayIndex] = Array(sortKey, id, editoria, foto, titulo, texto, publicacao);
+              break;
+
+            default:
+              sortKey = id;
+              arrayInternal [arrayIndex] = Array(sortKey, id, editoria, foto, titulo, texto, publicacao);
+              break;
+
+          }
+
+          arrayIndex++;
+
+        }
+
+      }
+    }
+  }
+
+  // Classyfy array according to selector "ordered by"
+  switch (globalCurrentSort) {
+
+    case "Data":
+      arrayInternal.sort();
+      break;
+
+    case "Editoria":
+      arrayInternal.sort();
+      break;
+
+    default:
+      arrayInternal.sort();
+      break;
+
+  }
+
+  // Generate unordered list
+  for (index=0; index < arrayInternal.length; index++) {
+
+        id = arrayInternal[index][1];
+        editoria = arrayInternal[index][2];
+        foto = arrayInternal[index][3];
+        titulo = arrayInternal[index][4];
+        texto = arrayInternal[index][5];
+        publicacao = arrayInternal[index][6];
+
+        if (editoria) {
+
+          // Update graph data
+          computeTotalEditorias(editoria);
+          createUnorderedList(editoria, foto, titulo, texto, publicacao);
+
+        }
+  }
 
 }
 
