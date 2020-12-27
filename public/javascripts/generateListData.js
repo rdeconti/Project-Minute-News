@@ -216,7 +216,6 @@ function formatListItem(data, classId) {
       var itemList = document.createElement("p");
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
       break;
 
     case "news-image":
@@ -226,35 +225,31 @@ function formatListItem(data, classId) {
       itemList.alt = "News data";
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
       break;
 
     case "news-title":
       var itemList = document.createElement("p");
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
       break;
 
     case "news-date":
       var itemList = document.createElement("p");
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
       break;
 
     case "news-text":
       var itemList = document.createElement("p");
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
       break;
 
     case "news-more":
-      var itemList = document.createElement("p");
+      var itemList = document.createElement("A");
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
+      itemList.href = "#";
       break;
 
     case "product-list-detail":
@@ -266,7 +261,6 @@ function formatListItem(data, classId) {
       itemList.classList.add("product-list-detail");
       itemList.textContent = data;
       itemList.classList.add(classId);
-      itemList.classId = classId;
       break;
 
   }

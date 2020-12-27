@@ -57,9 +57,6 @@ function createImage(itemJson, index){
   var slideShowImageNumber = "#slide-show-image-" + index;
   var slideShowDivision = document.querySelector(slideShowImageNumber);
 
-  console.log(slideShowImageNumber);
-  console.log(itemJson);
-
   var slideShowImage = document.createElement("IMG");
   var imageSrc = "http://localhost:3003/slides/" + itemJson;
   slideShowImage.src = imageSrc;

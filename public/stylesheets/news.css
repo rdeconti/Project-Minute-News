@@ -40,6 +40,7 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   border-left: 5px;
   border-color: brown;
   border-style: solid;
+  height: 100%;
 	display: inline-block;
 	width: 25%;
   vertical-align: top;
@@ -47,10 +48,12 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
 }
 
 .news-more{
-  padding: 10px;
   font-size: 18px;
   font-weight: bold;
-  text-align: right;
+  text-decoration: none;
+  color: blue;
+  float: right;
+  padding: 10px;
 }
 
 .news-text{
@@ -61,7 +64,7 @@ Challenge: https://github.com/Infoglobo/desafio-front-end
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  max-height: 100px;
+  min-height: 200px;
 }
 
 .news-title{

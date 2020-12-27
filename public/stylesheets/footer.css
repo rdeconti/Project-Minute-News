@@ -20,9 +20,27 @@ footer{
 	padding-bottom: 40px;
 }
 
-.footer-paragraph{
+.footer-paragraph1{
 	color: #FFFFFF;
 	font-size: 40px;
+	font-weight: 40px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.footer-paragraph2{
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: 40px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.footer-paragraph3{
+	color: #FFFFFF;
+	font-size: 20px;
 	font-weight: 40px;
 	margin: 0 auto;
 	text-align: center;
